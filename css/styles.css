@@ -1,0 +1,40 @@
+body {
+font-family:"Lilita One";
+color:#000;
+background-color:#fff;
+text-shadow:8px 8px 8px #ddd;
+margin:10px;
+}
+
+h1 {
+text-align:center;
+font-size:6em;
+}
+
+h2 {
+font-family:"Glegoo";
+	text-align: center;
+}
+
+.number {
+color: #700;
+}
+
+div#main {
+margin-top:160px;
+}
+
+a {
+color:#100;
+text-decoration:none;
+text-shadow:4px 4px 4px #ddd;
+}
+
+a:hover {
+text-shadow:4px 4px 4px #bbb;
+}
+
+footer {
+	margin-top: 50px;
+	text-align: center;
+}
