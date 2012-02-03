@@ -1,0 +1,3 @@
+[submodule "ext/spyc"]
+	path = ext/spyc
+	url = https://github.com/tekimaki/spyc

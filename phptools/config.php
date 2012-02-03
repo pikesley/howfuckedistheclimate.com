@@ -1,5 +1,5 @@
 <?php
-include('spyc/spyc.php');
+include('ext/spyc/spyc.php');
 
 class config
 {
