@@ -12,12 +12,12 @@ font-size:6em;
 }
 
 h2 {
-font-family:"Glegoo";
-	text-align: center;
+font-family:Glegoo;
+text-align:center;
 }
 
 .number {
-color: #700;
+color:#700;
 }
 
 div#main {
@@ -35,6 +35,6 @@ text-shadow:4px 4px 4px #bbb;
 }
 
 footer {
-	margin-top: 50px;
-	text-align: center;
+margin-top:50px;
+text-align:center;
 }
