@@ -68,12 +68,13 @@ if ($handle)
       </div>
       <footer>
       <h2>
+      Maybe this can help: 
       <?php
       $h = new hlink("http://ask.amee.com",
                    "Ask AMEE",
-                   "ask.amee.com",
+                   "[ask.amee.com]",
 		   True);
-#      print $h;
+      print $h;
 ?>
       </h2>
       </footer>
