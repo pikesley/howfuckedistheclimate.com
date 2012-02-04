@@ -63,8 +63,19 @@ if ($handle)
           <h2><?php echo $codes[rand(0, count($codes) - 1)]; ?></h2>
         </hgroup>
       </header>
-      <footer>
+      <div id="tweet">
       <?php include('includes/tweet_button.inc'); ?>
+      </div>
+      <footer>
+      <h2>
+      <?php
+      $h = new hlink("http://ask.amee.com",
+                   "Ask AMEE",
+                   "ask.amee.com",
+		   True);
+#      print $h;
+?>
+      </h2>
       </footer>
     </div>
   </body>
