@@ -71,8 +71,8 @@ if ($handle)
       Maybe this can help: 
       <?php
       $h = new hlink("http://ask.amee.com",
+                   "ask.amee.com",
                    "Ask AMEE",
-                   "[ask.amee.com]",
 		   True);
       print $h;
       ?>

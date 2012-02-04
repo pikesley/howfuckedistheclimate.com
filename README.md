@@ -3,6 +3,6 @@ Copy `config/config.yaml-dummy` to `config/config.yaml`, fill in stuff. Or, you 
     git submodule init
     git submodule update
 
-to get spyc.
+to get spyc. (Why doesn't git just handle this? Subversion handles this)
 
 
