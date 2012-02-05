@@ -3,3 +3,14 @@ include:
 
 accounts:
   google_analytics: FOO-BAR
+
+eighthundreds:
+  url: https://github.com/AMEE/8XX-rfc
+  raw: https://raw.github.com/AMEE/8XX-rfc/master/README.md
+
+mysql:
+  host:  localhost
+  user:  hfitc
+  pass:  PASSWORD
+  db:    howfuckedistheclimate
+  table: codes

@@ -5,19 +5,17 @@
 <?php
 class eighthundredcode
 {
-  function eighthundredcode($s)
+  function eighthundredcode($code, $text)
   {
-    $s = substr($s, 2, strlen($s));
-    $a = explode(" ", $s);
-    $this->number = array_shift($a);
-    $this->text = implode(" ", $a);
+     $this->code = $code;
+     $this->text = $text;
   }
 
   function __toString()
   {
     $s = 'ERROR ';
     $s .= '<span class="number">';
-    $s .= $this->number;
+    $s .= $this->code;
     $s .= ':</span> ';
     $s .= $this->text;
 
@@ -28,23 +26,18 @@ class eighthundredcode
     return $h->__toString();
   }
 }
-$codes = Array();
-$handle = @fopen("https://raw.github.com/AMEE/8XX-rfc/master/README.md", "r");
-if ($handle)
-{
-  while (($buffer = fgets($handle, 4096)) !== false)
-  {
-    $b = trim($buffer);
-    if (substr($b, 0, 1) == '-')
-    {
-      if (! strpos($b, "http"))
-      {
-        array_push($codes, new eighthundredcode($b));
-      }
-    }
-  }
-  fclose($handle);
-}
+
+$db_link = mysql_connect($config->get('mysql', 'host'),
+                         $config->get('mysql', 'user'),
+                         $config->get('mysql', 'pass'))
+                         or die("Could not connect: " . mysql_error());
+
+mysql_select_db($config->get('mysql', 'db'), $db_link)
+                or die ('Can\'t use ' . $config->get('mysql', 'db') . ': ' . mysql_error());
+
+$query = "select code, text from " . $config->get('mysql', 'table') . ' order by rand() limit 1';
+$result = mysql_fetch_row(mysql_query($query));
+$code = new eighthundredcode($result[0], $result[1]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +53,7 @@ if ($handle)
       <header>
         <hgroup>
           <h1>Pretty fucked.</h1>
-          <h2><?php echo $codes[rand(0, count($codes) - 1)]; ?></h2>
+          <h2><?php echo $code; ?></h2>
         </hgroup>
       </header>
       <div id="tweet">
