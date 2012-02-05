@@ -5,10 +5,11 @@
 <?php
 class eighthundredcode
 {
-  function eighthundredcode($code, $text)
+  function eighthundredcode($code, $text, $config)
   {
      $this->code = $code;
      $this->text = $text;
+     $this->config = $config;
   }
 
   function __toString()
@@ -19,8 +20,8 @@ class eighthundredcode
     $s .= ':</span> ';
     $s .= $this->text;
 
-    $h = new hlink("https://github.com/AMEE/8XX-rfc",
-                   "Civilisational HTTP Error Codes",
+    $h = new hlink($this->config->get('eighthundreds', 'url'),
+                   $this->config->get('eighthundreds', 'name'),
                    $s,
                    True);
     return $h->__toString();
@@ -37,7 +38,7 @@ mysql_select_db($config->get('mysql', 'db'), $db_link)
 
 $query = "select code, text from " . $config->get('mysql', 'table') . ' order by rand() limit 1';
 $result = mysql_fetch_row(mysql_query($query));
-$code = new eighthundredcode($result[0], $result[1]);
+$code = new eighthundredcode($result[0], $result[1], $config);
 ?>
 <!DOCTYPE html>
 <html lang="en">
