@@ -20,7 +20,8 @@ open(y['eighthundreds']['raw']).readlines.each do |line|
     code = b.shift
     text = b.join(' ')
     if not text.include?('http')
-      query = "INSERT INTO #{y['mysql']['table']} VALUES (#{code}, '#{text}') ON DUPLICATE KEY UPDATE text = text;;"
+      query = "INSERT INTO #{y['mysql']['table']} VALUES (#{code}, '#{text}') ON DUPLICATE KEY UPDATE text = text;"
+      puts "Upserting '#{code} - #{text}'"
       dbh.query(query)
     end
   end
