@@ -50,6 +50,7 @@ $code = new eighthundredcode($result[0], $result[1], $config);
     <?php include('includes/google_analytics.inc'); ?>
   </head>
   <body>
+    <?php include('includes/forkme.inc'); ?>
     <div id="main">
       <header>
         <hgroup>
