@@ -62,16 +62,21 @@ $code = new eighthundredcode($result[0], $result[1], $config);
       <?php include('includes/tweet_button.inc'); ?>
       </div>
       <footer>
-      <h2>
-      Maybe this can help: 
-      <?php
-      $h = new hlink("http://ask.amee.com",
-                   "ask.amee.com",
-                   "Ask AMEE",
-		   True);
+      <h3>
+      howfuckedistheclimate.com created by <?php
+      $h = new hlink("http://www.cruft.co",
+		     "Messrs. Obadiah CRUFT & Company, London, Purveyors of the fynest TECHNICAL DEBT to the Kingdom & COLONIES",
+		     "cruft.co",
+		     True);
+      print $h;
+      ?> / <?php
+      $h = new hlink("http://org.orgraphone.org",
+		     "Home of the Orgraphone",
+		     "orgraphone.org",
+		     True);
       print $h;
       ?>
-      </h2>
+      </h3>
       </footer>
     </div>
   </body>
