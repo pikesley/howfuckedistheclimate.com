@@ -1,6 +1,7 @@
 <?php require_once("phptools/fontimporter.php"); ?>
 <?php require_once("phptools/hlink.php"); ?>
 <?php require_once("phptools/config.php"); ?>
+<?php require_once("phptools/is_christmas.php"); ?>
 <?php $config = new config('config/config.yaml'); ?>
 <?php
 class eighthundredcode
@@ -46,12 +47,24 @@ $code = new eighthundredcode($result[0], $result[1], $config);
     <meta charset="utf-8" /> 
     <title>How fucked is <?php echo $config->get('include', 'whats_fucked'); ?>?</title>
     <?php $fi = new fontimporter('Lilita+One', 'Glegoo'); print $fi; ?>
-    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+    <?php
+    $stylesheet = "styles.css";
+    if (is_christmas())
+    {
+        $stylesheet = "christmas.css";
+    }  
+    ?>
+    <link href="/css/<?php echo $stylesheet; ?>" rel="stylesheet" type="text/css" />
     <?php include('includes/google_analytics.inc'); ?>
   </head>
   <body>
     <?php include('includes/forkme.inc'); ?>
-    <?php include('includes/snow.inc'); ?>
+    <?php
+    if (is_christmas())
+    {
+        include('includes/snow.inc');
+    }
+    ?>
     <div id="main">
       <header>
         <hgroup>
