@@ -1,6 +1,6 @@
 body {
 font-family:"Lilita One";
-color:#eee;
+color:#272;
 background-color:#333;
 text-shadow:8px 8px 8px #111;
 text-align:center;
@@ -18,7 +18,7 @@ text-align:center;
 }
 
 .number {
-color:#900;
+color:#B00;
 }
 
 div#main {
@@ -30,7 +30,7 @@ margin-top:50px;
 }
 
 a {
-color:#700;
+color:#900;
 text-decoration:none;
 text-shadow:4px 4px 4px #111;
 }
