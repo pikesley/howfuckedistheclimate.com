@@ -1,8 +1,8 @@
 body {
 font-family:"Lilita One";
-color:#000;
-background-color:#fff;
-text-shadow:8px 8px 8px #ddd;
+color:#eee;
+background-color:#333;
+text-shadow:8px 8px 8px #111;
 text-align:center;
 margin:10px;
 }
@@ -18,7 +18,7 @@ text-align:center;
 }
 
 .number {
-color:#700;
+color:#900;
 }
 
 div#main {
@@ -30,13 +30,13 @@ margin-top:50px;
 }
 
 a {
-color:#300;
+color:#700;
 text-decoration:none;
-text-shadow:4px 4px 4px #ddd;
+text-shadow:4px 4px 4px #111;
 }
 
 a:hover {
-text-shadow:4px 4px 4px #bbb;
+text-shadow:4px 4px 4px #222;
 }
 
 footer {

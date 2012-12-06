@@ -51,6 +51,7 @@ $code = new eighthundredcode($result[0], $result[1], $config);
   </head>
   <body>
     <?php include('includes/forkme.inc'); ?>
+    <?php include('includes/snow.inc'); ?>
     <div id="main">
       <header>
         <hgroup>
