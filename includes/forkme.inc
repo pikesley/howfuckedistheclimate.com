@@ -1,4 +1,12 @@
 <?php require_once('phptools/config.php'); ?>
+<?php require_once('phptools/is_christmas.php'); ?>
 <?php $config = new config('config/config.yaml'); ?>
 <?php $gh = $config->get('github', 'repo'); ?>
-<a href="https://github.com/<?php print $gh ?>"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<?php
+$ribbon_colour = "darkblue_121621";
+if (is_christmas)
+{
+    $ribbon_colour = "green_007200";
+}
+?>
+<a href="https://github.com/<?php print $gh ?>"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_<?php echo $ribbon_colour; ?>.png" alt="Fork me on GitHub"></a>
