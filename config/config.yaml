@@ -1,0 +1,20 @@
+include:
+  whats_fucked: "the climate"
+
+accounts:
+  google_analytics: UA-28810060-1
+
+github:
+  repo: pikesley/howfuckedistheclimate.com
+
+eighthundreds:
+  url:  https://github.com/AMEE/8XX-rfc
+  raw:  https://raw.github.com/AMEE/8XX-rfc/master/README.md
+  name: Civilisational HTTP Error Codes
+
+mysql:
+  host:  localhost
+  user:  hfitc
+  pass:  NexBoHom2
+  db:    howfuckedistheclimate
+  table: codes
