@@ -1,7 +1,7 @@
 <?php require_once("phptools/fontimporter.php"); ?>
 <?php require_once("phptools/hlink.php"); ?>
 <?php require_once("phptools/config.php"); ?>
-<?php #require_once("phptools/valid_links.php"); ?>
+<?php require_once("phptools/validlinks.php"); ?>
 <?php require_once("phptools/is_christmas.php"); ?>
 <?php $config = new config('config/config.yaml'); ?>
 <?php
@@ -93,6 +93,8 @@ $code = new eighthundredcode($result[0], $result[1], $config);
       ?>
       </h3>
       <?php
+      $vl = new validlinks();
+      print $vl;
       ?>
       </footer>
     </div>
