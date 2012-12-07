@@ -48,14 +48,15 @@ $code = new eighthundredcode($result[0], $result[1], $config);
     <meta charset="utf-8" /> 
     <title>How fucked is <?php echo $config->get('include', 'whats_fucked'); ?>?</title>
     <?php $fi = new fontimporter('Lilita+One', 'Glegoo'); print $fi; ?>
+    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
     <?php
-    $stylesheet = "styles.css";
     if (is_christmas)
     {
-        $stylesheet = "christmas.css";
+	    ?>
+    <link href="/css/christmas.css" rel="stylesheet" type="text/css" />
+    <?php
     }  
     ?>
-    <link href="/css/<?php echo $stylesheet; ?>" rel="stylesheet" type="text/css" />
     <?php include('includes/google_analytics.inc'); ?>
   </head>
   <body>
