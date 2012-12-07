@@ -5,6 +5,7 @@
 <?php require_once("phptools/is_christmas.php"); ?>
 <?php $config = new config('config/config.yaml'); ?>
 <?php
+ob_start();
 class eighthundredcode
 {
   function eighthundredcode($code, $text, $config)
@@ -67,6 +68,7 @@ $code = new eighthundredcode($result[0], $result[1], $config);
         include('includes/snow.inc');
     }
     ?>
+
     <div id="main">
       <header>
         <hgroup>
@@ -101,3 +103,25 @@ $code = new eighthundredcode($result[0], $result[1], $config);
     </div>
   </body>
 </html>
+
+<?php
+$tidy_config = array(
+		'hide-comments' => true,
+		'tidy-mark' => false,
+		'indent' => true,
+		'indent-spaces' => 1,
+		'new-blocklevel-tags' => 'article,header,footer,section,nav',
+		'new-inline-tags' => 'video,audio,canvas,ruby,rt,rp',
+		'doctype' => '<!DOCTYPE HTML>',
+		'sort-attributes' => 'alpha',
+		'vertical-space' => false,
+		'wrap' => 180,
+		'wrap-attributes' => false,
+		'break-before-br' => false,
+		);
+$html = ob_get_clean();
+$tidy = new tidy();
+$tidy->parseString($html, $tidy_config, 'utf8');
+$tidy->cleanRepair();
+echo $tidy;
+?>
