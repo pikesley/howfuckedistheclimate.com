@@ -1,56 +1,18 @@
 body {
-font-family:"Lilita One";
 color:#007200;
 background-color:#333;
 text-shadow:8px 8px 8px #111;
-text-align:center;
-margin:10px;
 }
-
-h1 {
-text-align:center;
-font-size:6em;
-}
-
-h2, h3, #validlinks {
-font-family:Glegoo;
-text-align:center;
-}
-
-#validlinks {
-position:fixed;
-bottom:5px;
-right:5px;
-} 
 
 .number {
 color:#B00;
 }
 
-div#main {
-margin-top:160px;
-}
-
-div#tweet {
-margin-top:50px;
-}
-
 a {
 color:#900;
-text-decoration:none;
 text-shadow:4px 4px 4px #111;
 }
 
 a:hover {
 text-shadow:4px 4px 4px #222;
-}
-
-footer {
-text-align:center;
-position:fixed;
-bottom:0;
-z-index:999999;
-width:100%;
-font-size:.5em;
-margin:auto;
 }

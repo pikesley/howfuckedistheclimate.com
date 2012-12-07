@@ -12,15 +12,17 @@ text-align:center;
 font-size:6em;
 }
 
-h2, h3, #validlinks {
+h2,h3,#validlinks {
 font-family:Glegoo;
 text-align:center;
 }
 
 #validlinks {
 position:fixed;
-bottom:5px;
-right:5px;
+top:5px;
+text-align:center;
+width:100%;
+margin:auto;
 }
 
 .number {
