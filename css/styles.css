@@ -20,9 +20,7 @@ text-align:center;
 #validlinks {
 position:fixed;
 top:5px;
-text-align:center;
-width:100%;
-margin:auto;
+left:5px;
 }
 
 .number {
@@ -50,9 +48,7 @@ text-shadow:4px 4px 4px #bbb;
 footer {
 text-align:center;
 position:fixed;
-bottom:0;
-z-index:999999;
-width:100%;
+bottom:5px;
+right:10px;
 font-size:.5em;
-margin:auto;
 }
