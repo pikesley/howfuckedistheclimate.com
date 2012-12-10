@@ -5,5 +5,5 @@ snowStorm.flakesMax = 1024;
 snowStorm.flakesMaxActive = 512;
 snowStorm.followMouse = true;
 snowStorm.freezeOnBlur = true;
-snowStorm.snowStick = false;
+snowStorm.snowStick = true;
 </script>
