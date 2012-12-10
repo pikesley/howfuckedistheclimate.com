@@ -34,7 +34,7 @@ class validlinks
             }
         }
 
-        $t = "Valid HTML5";
+        $t = "[Valid HTML5]";
         if($this->config->has_key('messages', 'html5'))
         {
             $t = $this->config->get('messages', 'html5');
@@ -44,7 +44,7 @@ class validlinks
         $s .= $a;
         $s .= '|';
 
-        $t = "Valid CSS3";
+        $t = "[Valid CSS3]";
         if($this->config->has_key('messages', 'css3'))
         {
             $t = $this->config->get('messages', 'css3');

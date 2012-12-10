@@ -114,14 +114,16 @@ print $vl;
 $tidy_config = array('hide-comments' => true,
                      'tidy-mark' => false,
                      'indent' => true,
-                     'indent-spaces' => 1,
-                     'new-blocklevel-tags' => 'article,header,footer,section,nav',
+                     'indent-spaces' => 2,
+                     'new-blocklevel-tags' =>
+		       'article,header,footer,section,nav',
                      'new-inline-tags' => 'video,audio,canvas,ruby,rt,rp',
                      'doctype' => '<!DOCTYPE HTML>',
                      'sort-attributes' => 'alpha',
                      'vertical-space' => false,
                      'wrap' => 180,
                      'wrap-attributes' => false,
+		     'indent-attributes' => true,
                      'break-before-br' => false);
 $html = ob_get_clean();
 $tidy = new tidy();
