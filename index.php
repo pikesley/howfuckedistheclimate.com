@@ -91,9 +91,7 @@ $h = new hlink("http://www.cruft.co",
                "cruft.co",
                True);
 print $h;
-?>
-/
-<?php
+?>/<?php
 $h = new hlink("http://org.orgraphone.org",
                "Home of the Orgraphone",
                "orgraphone.org",
