@@ -54,7 +54,7 @@ $code = new eighthundredcode($result[0], $result[1], $config);
 <?php $fi = new fontimporter('Lilita+One', 'Glegoo'); print $fi; ?>
     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
 <?php
-if (is_christmas)
+if (is_christmas())
 {
 ?>
     <link href="/css/christmas.css" rel="stylesheet" type="text/css" />
@@ -66,7 +66,7 @@ if (is_christmas)
   <body>
 <?php include('includes/forkme.inc'); ?>
 <?php
-if (is_christmas)
+if (is_christmas())
 {
   include('includes/snow.inc');
 }
