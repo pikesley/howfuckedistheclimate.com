@@ -3,8 +3,8 @@
 <?php $config = new config('config/config.yaml'); ?>
 <?php $gh = $config->get('github', 'repo'); ?>
 <?php
-$ribbon_colour = "darkblue_121621";
-if (is_christmas)
+$ribbon_colour = "orange_ff7600";
+if (is_christmas())
 {
     $ribbon_colour = "green_007200";
 }

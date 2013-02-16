@@ -1,0 +1,20 @@
+/* http://colorschemedesigner.com/#0p11Tw0w0w0w0 */
+body {
+color:#FF8D40;
+background-color:#FF6700;
+text-shadow:8px 8px 8px #A64300;
+}
+
+.number {
+color:#FFAB73;
+}
+
+a {
+color:#FF8D40;
+text-shadow:4px 4px 4px #A64300;
+}
+
+a:hover {
+color:#A64300;
+text-shadow:4px 4px 4px #A64300;
+}
