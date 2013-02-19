@@ -53,7 +53,7 @@ $code = new eighthundredcode($result[0], $result[1], $config);
     <title>How fucked is <?php echo $config->get('include', 'whats_fucked'); ?>?</title>
 <?php $fi = new fontimporter('Lilita+One', 'Glegoo'); print $fi; ?>
     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
-    <link href="/css/orange.css" rel="stylesheet" type="text/css" />
+<!--    <link href="/css/orange.css" rel="stylesheet" type="text/css" /> -->
 <?php
 if (is_christmas())
 {
