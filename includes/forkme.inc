@@ -3,7 +3,7 @@
 <?php $config = new config('config/config.yaml'); ?>
 <?php $gh = $config->get('github', 'repo'); ?>
 <?php
-$ribbon_colour = "orange_ff7600";
+$ribbon_colour = "gray_6d6d6d";
 if (is_christmas())
 {
     $ribbon_colour = "green_007200";
