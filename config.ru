@@ -1,14 +1,4 @@
-use Rack::Static,
-  :urls => ['/css', '/favicon.ico'],
-  :root => 'public'
+require 'rubygems'
+require File.join(File.dirname(__FILE__), 'lib/how_fucked_is_the_climate.rb')
 
-run lambda { |env|
-  [
-    200,
-    {
-      'Content-Type'  => 'text/html',
-      'Cache-Control' => 'public, max-age=86400'
-    },
-    File.open('public/index.html', File::RDONLY)
-  ]
-}
+run HowFuckedIsTheClimate
